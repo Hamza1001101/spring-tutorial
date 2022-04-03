@@ -1,9 +1,9 @@
 package org.example.web;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.example.context.MyFancyPdfInvoicesApplicationConfiguration;
 import org.example.model.Invoice;
 import org.example.service.InvoiceService;
-import org.example.context.MyFancyPdfInvoicesApplicationConfiguration;
 import org.example.service.UserService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-public class MyFancyPdfInvoicesServlet extends HttpServlet {
+public class MyFancyPdfInvoicesServlet extends HttpServlet{
  
     private UserService userService;
     private ObjectMapper objectMapper;
@@ -37,6 +37,9 @@ public class MyFancyPdfInvoicesServlet extends HttpServlet {
     public void init(){
         AnnotationConfigApplicationContext ctx = 
                 new AnnotationConfigApplicationContext(MyFancyPdfInvoicesApplicationConfiguration.class); 
+        
+        ctx.registerShutdownHook();
+        
         this.userService=ctx.getBean(UserService.class);
         this.objectMapper=ctx.getBean(ObjectMapper.class); 
         this.invoiceService=ctx.getBean(InvoiceService.class);

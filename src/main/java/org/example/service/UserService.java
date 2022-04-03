@@ -1,10 +1,12 @@
 package org.example.service;
 
 import org.example.model.User;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
+
+@Component
 public class UserService {
     
     public User findById(String id){
