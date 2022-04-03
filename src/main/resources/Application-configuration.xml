@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class="org.example.service.UserService"/>
+
+    <bean id="invoiceService" class="org.example.service.InvoiceService">
+        <constructor-arg value="userService"/>
+    </bean>
+    <bean id="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper"/>
+</beans>

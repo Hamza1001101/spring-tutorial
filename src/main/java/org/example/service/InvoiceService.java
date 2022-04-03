@@ -1,6 +1,5 @@
 package org.example.service;
 
-import org.example.context.Application;
 import org.example.model.Invoice;
 import org.example.model.User;
 
