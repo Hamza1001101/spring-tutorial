@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class MyFancyPdfInvoicesServlet extends HttpServlet {
-
+ 
     private UserService userService;
     private ObjectMapper objectMapper;
     private InvoiceService invoiceService;
@@ -23,6 +23,7 @@ public class MyFancyPdfInvoicesServlet extends HttpServlet {
      * All way of configuring if you used Spring XML configurations. 
      * A lot of legacy code still use this. 
      */
+    //TODO FIX MI!
     /*@Override
     public void init(){
         ApplicationContext ctx = 
