@@ -1,0 +1,10 @@
+org\example\model\User.class
+org\example\web\GlobalControllerExceptionHandler.class
+org\example\web\InvoicesController.class
+org\example\context\ApplicationConfiguration.class
+org\example\ApplicationLauncher.class
+org\example\model\Invoice.class
+org\example\Dto\InvoiceDto.class
+org\example\service\DummyInvoiceServiceLoader.class
+org\example\service\InvoiceService.class
+org\example\service\UserService.class

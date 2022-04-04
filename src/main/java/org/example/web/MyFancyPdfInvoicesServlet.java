@@ -1,38 +1,26 @@
 package org.example.web;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.context.MyFancyPdfInvoicesApplicationConfiguration;
-import org.example.model.Invoice;
-import org.example.service.InvoiceService;
-import org.example.service.UserService;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+/*public class MyFancyPdfInvoicesServlet extends HttpServlet{
 
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.List;
+private UserService userService;
+private ObjectMapper objectMapper;
+private InvoiceService invoiceService;*/
 
-public class MyFancyPdfInvoicesServlet extends HttpServlet{
- 
-    private UserService userService;
-    private ObjectMapper objectMapper;
-    private InvoiceService invoiceService;
-
-    /**
-     * All way of configuring if you used Spring XML configurations. 
-     * A lot of legacy code still use this. 
-     */
-    //TODO FIX MI!
-    /*@Override
+/**
+ * All way of configuring if you used Spring XML configurations. 
+ * A lot of legacy code still use this. 
+ */
+    //TODO FIX MI! 
+/*
+@Override
     public void init(){
         ApplicationContext ctx = 
                 new ClassPathXmlApplicationContext("Application-configuration.xml"); 
         this.userService=ctx.getBean(UserService.class); 
         this.objectMapper=  ctx.getBean(ObjectMapper.class); 
         this.invoiceService= ctx.getBean(InvoiceService.class); 
-    }*/
-    
+    }
+   
     @Override
     public void init(){
         AnnotationConfigApplicationContext ctx = 
@@ -84,3 +72,4 @@ public class MyFancyPdfInvoicesServlet extends HttpServlet{
         }
     }
 }
+*/
